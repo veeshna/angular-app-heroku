@@ -1,0 +1,19 @@
+.p-card .p-card-body {
+  height: 600px ;
+}
+.container{
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  .cards{
+    width: 80%;
+    margin-bottom: 16px;
+
+    p{
+      color: red;
+      font-weight: 600;
+    }
+  }
+}
