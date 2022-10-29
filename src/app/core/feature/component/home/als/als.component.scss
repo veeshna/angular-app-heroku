@@ -1,0 +1,36 @@
+.container{
+  display: grid;
+  grid-template-rows: 400px;
+  grid-template-columns: 1.5fr 2fr;
+  width: 100%;
+  gap: 20px;
+  margin: 0 auto;
+  background-color: #fdf2f3;
+  padding: 0 40px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 80px;
+  .main-image{
+    align-self: center;
+  }
+  .contents{
+    display:flex;
+    flex-direction: column;
+    .title{
+      font-weight: 600;
+      font-size: 24px;
+    }
+    .description{
+      font-size: 18px;
+    }
+    .image-container{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .image-size{
+        display: flex;
+        height: 80px;
+      }
+    }
+  }
+}
