@@ -1,24 +1,32 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { sharedModule } from './core/shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { AccordionModule } from 'primeng/accordion';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { UserManagementModule } from './core/user-management/user-management.module';
-import { LoginComponent } from './core/user-management/login/login.component';
-// import { PanelModule, InputTextModule, ButtonModule } from 'primeng';
 import {InputTextModule} from 'primeng/inputtext';
 import {CardModule} from 'primeng/card';
 import {DialogModule} from 'primeng/dialog';
 import {ButtonModule} from 'primeng/button';
+import { FeatureModule } from './core/feature/component/diy-first-aid/feature.module';
 
 import {PanelModule} from 'primeng/panel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+
 @NgModule({
   declarations: [
-    AppComponent,LoginComponent
+    AppComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
@@ -28,11 +36,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CardModule,
     DialogModule,
     ButtonModule,
-   PanelModule
+   PanelModule,
       
     // UserManagementModule
+    UserManagementModule,
+    sharedModule,
+    FeatureModule,
   ],
+  exports: [],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
