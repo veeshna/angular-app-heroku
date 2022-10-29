@@ -32,6 +32,7 @@ import { TabViewModule } from 'primeng/tabview';
     TabViewModule,
     FormsModule,
     CommonModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [],
