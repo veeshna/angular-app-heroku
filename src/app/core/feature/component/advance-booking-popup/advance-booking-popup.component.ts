@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ambulanceType } from 'src/app/core/models/register';
 
@@ -8,8 +8,8 @@ import { ambulanceType } from 'src/app/core/models/register';
   styleUrls: ['./advance-booking-popup.component.scss'],
 })
 export class AdvanceBookingPopupComponent implements OnInit {
-  displayModal: boolean = false;
-
+  @Input() displayModal: any;
+  @Output() advancedPopup = new EventEmitter<boolean>();
   displayBasic: boolean = false;
 
   displayBasic2: boolean = false;
@@ -72,7 +72,11 @@ export class AdvanceBookingPopupComponent implements OnInit {
     this.position = position;
     this.displayPosition = true;
   }
+  onClosePopUp() {
+    this.advancedPopup.emit(false);
+  }
   onSubmit() {
     this.displayModal = false;
+    this.advancedPopup.emit(false);
   }
 }
