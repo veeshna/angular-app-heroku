@@ -1,0 +1,14 @@
+p-card {
+  width: 100% !important;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  .ambulance-list {
+    display: flex;
+    width: 30%;
+  }
+}

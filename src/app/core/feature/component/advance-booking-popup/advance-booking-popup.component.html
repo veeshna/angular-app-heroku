@@ -1,0 +1,68 @@
+<p-button
+  (click)="showModalDialog()"
+  icon="pi pi-external-link"
+  label="Show"
+></p-button>
+<p-dialog
+  header="Advance Ambulance Booking"
+  [(visible)]="displayModal"
+  [modal]="true"
+  [style]="{ width: '50vw' }"
+  [baseZIndex]="10000"
+  [draggable]="false"
+  [resizable]="false"
+>
+  <form [formGroup]="advanceBookingForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="username">Type</label>
+      <p-dropdown
+        [options]="cities"
+        formControlName="selectedCity"
+        optionLabel="name"
+      >
+        <ng-template let-country pTemplate="item">
+          <div class="country-item">
+            <img
+              src="assets/showcase/images/demo/flag/flag_placeholder.png"
+              [class]="'flag flag-' + country.code.toLowerCase()"
+            />
+            <div>{{ country.name }}</div>
+          </div>
+        </ng-template></p-dropdown
+      >
+    </div>
+    <div class="form-group">
+      <label for="password">Pick up Location</label>
+      <p-autoComplete
+        formControlName="pickUpLocation"
+        [suggestions]="results"
+        (completeMethod)="search()"
+        field="name"
+      >
+        <ng-template let-country pTemplate="item">
+          <div class="country-item">
+            <div>{{ country.name }}</div>
+          </div>
+        </ng-template></p-autoComplete
+      >
+    </div>
+    <div class="form-group">
+      <label for="password">Drop Location</label>
+      <p-autoComplete
+        formControlName="dropLocation"
+        [suggestions]="results"
+        (completeMethod)="search()"
+        field="name"
+      >
+        <ng-template let-country pTemplate="item">
+          <div class="country-item">
+            <div>{{ country.name }}</div>
+          </div>
+        </ng-template></p-autoComplete
+      >
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</p-dialog>
