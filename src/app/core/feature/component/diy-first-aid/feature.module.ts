@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { AccordionModule } from 'primeng/accordion';
-import { LoginComponent } from './login/login.component';
+import { DiyFirstAidComponent } from './diy-first-aid.component';
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [DiyFirstAidComponent],
   imports: [AccordionModule],
   providers: [],
   bootstrap: [],
 })
-export class UserManagementModule {}
+export class FeatureModule {}
