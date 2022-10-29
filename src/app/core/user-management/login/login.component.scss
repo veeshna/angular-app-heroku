@@ -1,14 +1,14 @@
 .parent-container {
   display: flex;
-  // flex-direction: column;  
+  // flex-direction: column;
   position: relative;
-  .children{
-    width:50%;
-    
-    img{
+  .children {
+    width: 50%;
+
+    img {
       display: block;
       margin-left: auto;
-    margin-right: auto;
+      margin-right: auto;
       max-width: 100%;
       height: auto;
     }
@@ -19,18 +19,15 @@
     display: flex;
     justify-content: center;
     // align-items: flex-end;
-    .login-container{
+    .login-container {
       // height: 200px;
       width: 25%;
-     
+
       position: absolute;
       top: 30%;
       right: 15%;
-      
-    
     }
-   
-    
+
     .p-inputtext {
       width: 100%;
       margin-bottom: 5px;
