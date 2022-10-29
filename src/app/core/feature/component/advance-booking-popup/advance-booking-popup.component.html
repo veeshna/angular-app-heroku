@@ -1,11 +1,7 @@
-<p-button
-  (click)="showModalDialog()"
-  icon="pi pi-external-link"
-  label="Show"
-></p-button>
 <p-dialog
   header="Advance Ambulance Booking"
   [(visible)]="displayModal"
+  (onHide)="onClosePopUp()"
   [modal]="true"
   [style]="{ width: '50vw' }"
   [baseZIndex]="10000"

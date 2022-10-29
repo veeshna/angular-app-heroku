@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
 import { Validators, FormControl, FormGroup } from '@angular/forms';
-// import { Router } from '@angular/router';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,12 +18,12 @@ export class LoginComponent implements OnInit {
 
   submitted = false;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
   onSubmit() {
     this.submitted = true;
-    alert(JSON.stringify(this.loginForm.value));
+    this.router.navigate(['/home']);
   }
 }
