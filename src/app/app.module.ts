@@ -9,8 +9,6 @@ import { sharedModule } from './core/shared/shared.module';
 
 import { FeatureModule } from './core/feature/feature.module';
 
-import { LoginComponent } from './core/user-management/login/login.component';
-// import { PanelModule, InputTextModule, ButtonModule } from 'primeng';
 import { InputTextModule } from 'primeng/inputtext';
 import { CardModule } from 'primeng/card';
 import { DialogModule } from 'primeng/dialog';
@@ -18,7 +16,6 @@ import { ButtonModule } from 'primeng/button';
 
 import { PanelModule } from 'primeng/panel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 @NgModule({
   declarations: [AppComponent],
   imports: [
