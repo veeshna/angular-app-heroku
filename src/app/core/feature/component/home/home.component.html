@@ -2,32 +2,46 @@
   <app-navbar></app-navbar>
   <div class="main-container">
     <div class="button-container">
-      <button pButton type="button" class="p-button-raised p-button-rounded">Emergency Booking</button>
-      <button pButton type="button" class="p-button-raised p-button-rounded">Advanced Booking</button>
+      <button pButton type="button" class="p-button-raised p-button-rounded">
+        Emergency Booking
+      </button>
+      <button
+        pButton
+        type="button"
+        class="p-button-raised p-button-rounded"
+        (click)="advancedBooking()"
+      >
+        Advanced Booking
+      </button>
     </div>
-
-
 
     <div class="container">
       <p class="type">Type of Ambulances</p>
       <div class="type-ambulance">
-        <div class="ambulances" *ngFor="let item of ambulances" [ngClass]="{'active': item.isClicked}"  (click)="onswitch(item.title)">
-          <img class="size-image" src="{{item.image}}" alt="">
-
+        <div
+          class="ambulances"
+          *ngFor="let item of ambulances"
+          [ngClass]="{ active: item.isClicked }"
+          (click)="onswitch(item.title)"
+        >
+          <img class="size-image" src="{{ item.image }}" alt="" />
         </div>
       </div>
       <div class="type-ambulances">
-        <p *ngFor="let item of ambulances">{{item.title}}</p>
+        <p *ngFor="let item of ambulances">{{ item.title }}</p>
       </div>
 
-        <div class="image-container" [ngSwitch]="component"  >
-          <app-als *ngSwitchDefault="'ALS'"></app-als>
-          <app-bls *ngSwitchCase="'BLS'"></app-bls>
-          <app-pts *ngSwitchCase="'PTS'"></app-pts>
-        </div>
+      <div class="image-container" [ngSwitch]="component">
+        <app-als *ngSwitchDefault="'ALS'"></app-als>
+        <app-bls *ngSwitchCase="'BLS'"></app-bls>
+        <app-pts *ngSwitchCase="'PTS'"></app-pts>
       </div>
-
-
+    </div>
   </div>
-
+  <div *ngIf="isAdvancedPopup">
+    <app-advance-booking-popup
+      [displayModal]="isAdvancedPopup"
+      (advancedPopup)="popUpEvent($event)"
+    ></app-advance-booking-popup>
+  </div>
 </div>
