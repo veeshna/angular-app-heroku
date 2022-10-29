@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { sharedModule } from './core/shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { UserManagementModule } from './core/user-management/user-management.module';
-import { CommonModule } from '@angular/common';
-import { sharedModule } from './core/shared/shared.module';
 
 import { FeatureModule } from './core/feature/feature.module';
 
@@ -16,6 +18,7 @@ import { ButtonModule } from 'primeng/button';
 
 import { PanelModule } from 'primeng/panel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
