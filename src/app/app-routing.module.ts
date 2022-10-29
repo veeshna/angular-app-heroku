@@ -23,6 +23,10 @@ const routes: Routes = [
     component: GmapComponent,
   },
   {
+    path: 'ambulance-list',
+    component: AmbulanceListComponent,
+  },
+  {
     path: '**',
     redirectTo: 'login',
     pathMatch: 'full',

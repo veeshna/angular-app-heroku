@@ -18,6 +18,7 @@ import { ButtonModule } from 'primeng/button';
 
 import { PanelModule } from 'primeng/panel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
