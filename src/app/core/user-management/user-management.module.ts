@@ -9,6 +9,7 @@ import { PanelModule } from 'primeng/panel';
 import { InputTextModule } from 'primeng/inputtext';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegistrationComponent } from './registration/registration.component';
+import { Routes, RouterModule } from '@angular/router';
 @NgModule({
   declarations: [LoginComponent, RegistrationComponent],
   imports: [
@@ -21,6 +22,7 @@ import { RegistrationComponent } from './registration/registration.component';
     DialogModule,
     ButtonModule,
     PanelModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [],

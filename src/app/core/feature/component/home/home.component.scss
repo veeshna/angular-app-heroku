@@ -1,40 +1,46 @@
-.big-container{
+.big-container {
   height: 100%;
   display: flex;
   flex-direction: column;
-  .main-container{
+  .main-container {
     display: flex;
     flex-direction: column;
     overflow: auto;
     flex-grow: 1;
     height: 100%;
 
-    .button-container{
+    .button-container {
+      margin-top: 5px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 30px;
-
-
+      .p-button {
+        background: #d13144;
+        border: 1px solid #d13144;
+      }
+      .p-button:focus {
+        box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #d13144, 0 1px 2px 0 black;
+      }
     }
 
-    .container{
+    .container {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      .type{
+      .type {
         font-weight: 600;
         font-size: 36px;
         color: #222;
         border-bottom: #ea4f4c;
       }
-      .type-ambulance{
-        display:flex;
+      .type-ambulance {
+        display: flex;
         gap: 100px;
         align-items: flex-start;
         justify-content: center;
-        .ambulances{
+        .ambulances {
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -43,33 +49,26 @@
           height: 60px;
           width: 60px;
           background-color: #f5f2f2;
-          .size-image{
+          .size-image {
             height: 30px;
           }
-          &.active{
+          &.active {
             background-color: #d13144;
           }
         }
       }
-      .type-ambulances{
-        display:flex;
+      .type-ambulances {
+        display: flex;
         gap: 100px;
         width: 380px;
         font-weight: 600;
         align-items: flex-start;
         justify-content: space-around;
       }
-      .image-container{
+      .image-container {
         display: flex;
         flex-direction: column;
       }
-
     }
-
-
   }
-
-
-
 }
-

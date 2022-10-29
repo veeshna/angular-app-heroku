@@ -5,6 +5,7 @@ import { DiyFirstAidComponent } from './core/feature/component/diy-first-aid/diy
 import { HomeComponent } from './core/feature/component/home/home.component';
 import { GmapComponent } from './core/shared/gmap/gmap.component';
 import { LoginComponent } from './core/user-management/login/login.component';
+import { RegistrationComponent } from './core/user-management/registration/registration.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'gmap',
     component: GmapComponent,
+  },
+  {
+    path: 'register',
+    component: RegistrationComponent,
   },
   {
     path: '**',

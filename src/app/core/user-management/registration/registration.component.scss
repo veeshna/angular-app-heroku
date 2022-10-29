@@ -30,7 +30,7 @@ body {
 .form-header h1 {
   font-size: 30px;
   text-align: center;
-  color: #666;
+  color: #667;
   padding: 20px 0;
   border-bottom: 1px solid #cccccc;
 }
@@ -42,6 +42,7 @@ body {
   padding: 10px 20px;
   background-color: #eff0f1;
   /* color:#666; */
+  // background-color:  #667;;
 }
 
 .form-group {
@@ -70,13 +71,13 @@ body {
 }
 
 .horizontal-group .left {
-  float: left;
-  width: 49%;
+  // float: left;
+  width: 100%;
 }
 
 .horizontal-group .right {
-  float: right;
-  width: 49%;
+  // float: right;
+  width: 100%;
 }
 
 input[type="file"] {
