@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DiyFirstAidComponent } from './core/feature/component/diy-first-aid/diy-first-aid.component';
+import { HomeComponent } from './core/feature/component/home/home.component';
 import { LoginComponent } from './core/user-management/login/login.component';
 
 const routes: Routes = [
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'first-aid',
     component: DiyFirstAidComponent,
+  },
+  {
+    path:'home',
+    component:HomeComponent,
   },
   {
     path: '**',

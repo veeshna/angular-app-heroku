@@ -11,7 +11,8 @@ import { UserManagementModule } from './core/user-management/user-management.mod
 import { CommonModule } from '@angular/common';
 import { sharedModule } from './core/shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FeatureModule } from './core/feature/component/diy-first-aid/feature.module';
+import { FeatureModule } from './core/feature/feature.module';
+import { HomeComponent } from './core/feature/component/home/home.component';
 @NgModule({
   declarations: [AppComponent],
   imports: [
