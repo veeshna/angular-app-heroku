@@ -9,6 +9,27 @@
   </div>
   <ul class="navigation">
     <li class="parent">
+      <a class="link" (click)="op.toggle($event)">My Booking</a>
+      <p-overlayPanel #op [showCloseIcon]="true" [style]="{ width: '450px' }">
+        <ng-template pTemplate *ngFor="let item of ambulanceList">
+          <p-card header="RC: {{ item.rcNumber }}" styleClass="shadow-2">
+            <div class="main-content">
+              <div class="details">
+                <p>Name: {{ item.firstName }} {{ item.lastName }}</p>
+                <p>Phone Number: {{ item.phoneNumber }}</p>
+              </div>
+              <div class="content">
+                <p class="price">Rs: {{ item.price }}</p>
+              </div>
+            </div>
+            <ng-template pTemplate="footer">
+              <p-button label="Cancel Booking" icon="pi pi-check"></p-button>
+            </ng-template>
+          </p-card>
+        </ng-template>
+      </p-overlayPanel>
+    </li>
+    <li class="parent">
       <a
         class="link"
         [routerLink]="['/home']"
@@ -24,6 +45,6 @@
         >First Aid</a
       >
     </li>
-    <li class="parent"><a class="link">History</a></li>
+    <li class="parent"><a class="link">User profile</a></li>
   </ul>
 </nav>
