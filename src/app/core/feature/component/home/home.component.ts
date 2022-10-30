@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 type IAmbulance = {
   image: string;
@@ -13,7 +14,7 @@ type IAmbulance = {
 export class HomeComponent implements OnInit {
   isAdvancedPopup = false;
   // @Output() idAdvancedPopup = new EventEmitter<any>
-  constructor() {}
+  constructor(private route: Router) {}
 
   ngOnInit(): void {
     this.isAdvancedPopup = false;
@@ -38,6 +39,9 @@ export class HomeComponent implements OnInit {
 
   advancedBooking() {
     this.isAdvancedPopup = true;
+  }
+  emergencyBooking() {
+    this.route.navigate(['/emergency-booking']);
   }
   popUpEvent(event: boolean) {
     this.isAdvancedPopup = event;

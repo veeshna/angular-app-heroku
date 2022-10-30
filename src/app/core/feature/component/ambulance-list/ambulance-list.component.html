@@ -1,24 +1,25 @@
+<app-navbar></app-navbar>
 <div class="container">
   <div class="ambulance-list" *ngFor="let item of ambulanceList">
     <p-card
-      header="Advanced Card"
-      subheader="Card Subheader"
+      header="{{ item.id }}"
+      subheader="{{ item.id }}"
       styleClass="shadow-2"
+      class="style-flex"
     >
       <ng-template pTemplate="header">
-        <img alt="Card" [src]="item.photo" />
+        <img class="image-size" alt="Card" [src]="item.photo" />
       </ng-template>
       <p>Name: {{ item.firstName }} {{ item.lastName }}</p>
       <p>RC Number: {{ item.rcNumber }}</p>
       <p>Phone Number: {{ item.phoneNumber }}</p>
 
       <ng-template pTemplate="footer">
-        <p-button label="Book Now" icon="pi pi-check"></p-button>
-        <!-- <p-button
-          label="Cancel"
-          icon="pi pi-times"
-          styleClass="p-button-secondary"
-        ></p-button> -->
+        <p-button
+          label="Pay Now"
+          (click)="payment()"
+          icon="pi pi-check"
+        ></p-button>
       </ng-template>
     </p-card>
   </div>

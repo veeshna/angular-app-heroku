@@ -1,3 +1,4 @@
+import { GooglePayButtonModule } from '@google-pay/button-angular';
 import { NgModule } from '@angular/core';
 import { AccordionModule } from 'primeng/accordion';
 import { CardModule } from 'primeng/card';
@@ -17,11 +18,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { AmbulanceListComponent } from './component/ambulance-list/ambulance-list.component';
 import { TabViewModule } from 'primeng/tabview';
-import {CalendarModule} from 'primeng/calendar';
-import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { CalendarModule } from 'primeng/calendar';
+import { BrowserModule } from '@angular/platform-browser';
+import { PaymentComponent } from './component/payment/payment.component';
+
 @NgModule({
-  declarations: [DiyFirstAidComponent,NavbarComponent,HomeComponent, AlsComponent, BlsComponent, PtsComponent,AdvanceBookingPopupComponent,
-    AmbulanceListComponent,],
+  declarations: [
+    DiyFirstAidComponent,
+    NavbarComponent,
+    HomeComponent,
+    AlsComponent,
+    BlsComponent,
+    PtsComponent,
+    AdvanceBookingPopupComponent,
+    AmbulanceListComponent,
+    PaymentComponent,
+  ],
   imports: [
     AccordionModule,
     CardModule,
@@ -35,7 +47,7 @@ import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
     CommonModule,
     RouterModule,
     CalendarModule,
-    NgxMaterialTimepickerModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [],

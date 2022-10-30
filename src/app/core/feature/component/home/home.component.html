@@ -2,7 +2,12 @@
   <app-navbar></app-navbar>
   <div class="main-container">
     <div class="button-container">
-      <button pButton type="button" class="p-button-raised p-button-rounded">
+      <button
+        pButton
+        type="button"
+        (click)="emergencyBooking()"
+        class="p-button-raised p-button-rounded"
+      >
         Emergency Booking
       </button>
       <button
