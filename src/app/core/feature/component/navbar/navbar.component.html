@@ -1,11 +1,29 @@
 <nav class="navigationWrapper">
   <div class="logoWrapper">
-      <img class="logo" src="assets/images/logo-1.png" alt="logo" [routerLink]="['/home']">
+    <img
+      class="logo"
+      src="assets/images/logo-1.png"
+      alt="logo"
+      [routerLink]="['/home']"
+    />
   </div>
   <ul class="navigation">
-    <li class="parent"><a class="link"[routerLink]="['/home']" routerLinkActive="router-link-active"  >Home</a></li>
-    <li class="parent"><a class="link" [routerLink]="['/first-aid']" routerLinkActive="router-link-active"  >First Aid</a></li>
-    <li class="parent"><a class="link" >User profile</a></li>
+    <li class="parent">
+      <a
+        class="link"
+        [routerLink]="['/home']"
+        routerLinkActive="router-link-active"
+        >Home</a
+      >
+    </li>
+    <li class="parent">
+      <a
+        class="link"
+        [routerLink]="['/first-aid']"
+        routerLinkActive="router-link-active"
+        >First Aid</a
+      >
+    </li>
+    <li class="parent"><a class="link">History</a></li>
   </ul>
 </nav>
-
