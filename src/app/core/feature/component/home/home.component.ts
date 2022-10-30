@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.isAdvancedPopup = false;
   }
+  today: number = Date.now();
 
   ambulances: IAmbulance[] = [
     { image: 'assets/images/als.png', title: 'ALS', isClicked: true },

@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { UserManagementModule } from './core/user-management/user-management.module';
 
+
 import { FeatureModule } from './core/feature/feature.module';
 
 import { InputTextModule } from 'primeng/inputtext';
@@ -19,7 +20,9 @@ import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent
+  ],
   imports: [
     CommonModule,
     BrowserModule,

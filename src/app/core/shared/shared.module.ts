@@ -11,6 +11,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { TabViewModule } from 'primeng/tabview';
+import { CommonModule } from '@angular/common';
 
 const primengModules = [
   AccordionModule,
@@ -24,6 +25,7 @@ const primengModules = [
   InputTextModule,
   ButtonModule,
   TabViewModule,
+  CommonModule
 ];
 @NgModule({
   declarations: [GmapComponent],

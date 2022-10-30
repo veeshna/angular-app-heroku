@@ -21,14 +21,14 @@ export class AdvanceBookingPopupComponent implements OnInit {
   advanceBookingForm!: FormGroup;
   selectedCity!: ambulanceType;
   results: ambulanceType[] = [];
-  
-  
+
+
 
   constructor(private formBuilder: FormBuilder, private router: Router) {
     this.cities = [
       { name: 'ALS', code: 'NY' },
       { name: 'BLS', code: 'RM' },
-      { name: 'Morchary', code: 'LDN' },
+      { name: 'PTS', code: 'LDN' },
     ];
   }
 
@@ -45,11 +45,12 @@ export class AdvanceBookingPopupComponent implements OnInit {
   }
   search() {
     this.results = [
-      { name: 'New York', code: 'NY' },
-      { name: 'Rome', code: 'RM' },
-      { name: 'London', code: 'LDN' },
-      { name: 'Istanbul', code: 'IST' },
-      { name: 'Paris', code: 'PRS' },
+      { name: 'Ernakulam', code: 'NY' },
+      { name: 'Kunnumpuram', code: 'RM' },
+      { name: 'Pipeline', code: 'LDN' },
+      { name: 'Vytilla', code: 'IST' },
+      { name: 'Edapally', code: 'PRS' },
+      { name: 'Vazhakala', code: 'VKL' },
     ];
   }
   showModalDialog() {

@@ -21,7 +21,7 @@
     </div>
 
     <div class="container">
-      <p class="type">Type of Ambulances</p>
+      <p class="type">Ambulance Facilities</p>
       <div class="type-ambulance">
         <div
           class="ambulances"
@@ -42,11 +42,80 @@
         <app-pts *ngSwitchCase="'PTS'"></app-pts>
       </div>
     </div>
-  </div>
-  <div *ngIf="isAdvancedPopup">
-    <app-advance-booking-popup
-      [displayModal]="isAdvancedPopup"
-      (advancedPopup)="popUpEvent($event)"
-    ></app-advance-booking-popup>
-  </div>
+    <p class="types">Features</p>
+    <div class="first-container">
+      <div class="item">
+        <img
+          class="item-image"
+          src="assets/images/Smartphone.png"
+          alt="on-the-go"
+        />
+        <p class="new-para">On the Go</p>
+        <p>One touch access to medical emergency services</p>
+      </div>
+      <div class="item">
+        <img class="item-image" src="assets/images/Siren.png" alt="on-the-go" />
+        <p class="new-para">Emergency Booking</p>
+        <p>Keep your dear ones close with emergency contact option.</p>
+      </div>
+      <div class="item">
+        <img
+          class="item-image"
+          src="assets/images/New Ticket.png"
+          alt="on-the-go"
+        />
+        <p class="new-para">Advance Booking</p>
+        <p>Book ambulances in advance for hassle-free hospital visits.</p>
+      </div>
+      <div class="item">
+        <img class="item-image" src="assets/images/Easy.png" alt="on-the-go" />
+        <p class="new-para">Easy Communication</p>
+        <p>One touch access to medical emergency services</p>
+      </div>
+      <div class="item">
+        <img
+          class="item-image"
+          src="assets/images/Card Payment.png"
+          alt="on-the-go"
+        />
+        <p class="new-para">Transparent pricing</p>
+        <p>One touch access to medical emergency services</p>
+      </div>
+      <div class="item">
+        <img
+          class="item-image"
+          src="assets/images/Doctors Bag.png"
+          alt="on-the-go"
+        />
+        <p class="new-para">Tips & First aid information</p>
+        <p>One touch access to medical emergency services</p>
+      </div>
+    </div>
+    <div class="footer-container">
+      <div class="firsts-container">
+        <p class="title">
+          Ambocare
+        </p>
+        <img class="logo" src="assets/images/logo-1.png" alt="logo">
+        <p class="copyright">Copyright &copy; <span class="year">2022</span> by Ambocare. <br/>All
+          rights reserved</p>
+         </div>
+       <div class="second-container">
+        <p class="title">
+          Contact Us
+        </p>
+        <p class="description">
+          Ambocare</p>
+       </div>
+      </div>
+    </div>
+
+</div>
+
+
+<div *ngIf="isAdvancedPopup">
+  <app-advance-booking-popup
+    [displayModal]="isAdvancedPopup"
+    (advancedPopup)="popUpEvent($event)"
+  ></app-advance-booking-popup>
 </div>
