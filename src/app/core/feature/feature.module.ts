@@ -17,7 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { AmbulanceListComponent } from './component/ambulance-list/ambulance-list.component';
 import { TabViewModule } from 'primeng/tabview';
-
+import {CalendarModule} from 'primeng/calendar';
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 @NgModule({
   declarations: [DiyFirstAidComponent,NavbarComponent,HomeComponent, AlsComponent, BlsComponent, PtsComponent,AdvanceBookingPopupComponent,
     AmbulanceListComponent,],
@@ -32,7 +33,9 @@ import { TabViewModule } from 'primeng/tabview';
     TabViewModule,
     FormsModule,
     CommonModule,
-    RouterModule
+    RouterModule,
+    CalendarModule,
+    NgxMaterialTimepickerModule
   ],
   providers: [],
   bootstrap: [],

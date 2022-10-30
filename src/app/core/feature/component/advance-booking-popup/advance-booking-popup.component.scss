@@ -13,6 +13,7 @@ p {
   justify-content: center;
 }
 
+
 :host ::ng-deep .p-dialog .p-button {
   min-width: 6rem;
 }
@@ -64,7 +65,11 @@ body {
 }
 
 .form-group {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
+  width:100%;
 }
 
 .form-body .label-title {
@@ -88,6 +93,15 @@ body {
   outline: none;
 }
 
+.p-dropdown{
+  width: 100%;
+}
+.p-autoComplete{
+  width: 100%;
+}
+.p-inputtext{
+  width: 100%;
+}
 .horizontal-group .left {
   float: left;
   width: 49%;
@@ -103,7 +117,12 @@ input[type="file"] {
   cursor: pointer;
   font-size: 17px;
 }
+.form-group-3{
+  position: absolute;
+  top: 90%;
+  left: 33%;
 
+}
 #range-label {
   width: 15%;
   padding: 5px;
