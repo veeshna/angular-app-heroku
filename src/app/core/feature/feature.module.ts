@@ -21,7 +21,8 @@ import { TabViewModule } from 'primeng/tabview';
 import { CalendarModule } from 'primeng/calendar';
 import { BrowserModule } from '@angular/platform-browser';
 import { PaymentComponent } from './component/payment/payment.component';
-
+import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { TableModule } from 'primeng/table';
 @NgModule({
   declarations: [
     DiyFirstAidComponent,
@@ -48,6 +49,8 @@ import { PaymentComponent } from './component/payment/payment.component';
     RouterModule,
     CalendarModule,
     BrowserModule,
+    OverlayPanelModule,
+    TableModule,
   ],
   providers: [],
   bootstrap: [],

@@ -36,8 +36,8 @@ export class PaymentComponent implements OnInit {
       {
         type: 'CARD',
         parameters: {
-          // allowedAuthMethods: ['PAN_ONLY'],
-          // allowedCardNetworks: ['AMEX', 'VISA', 'MASTERCARD'],
+          allowedAuthMethods: ['PAN_ONLY'],
+          allowedCardNetworks: ['AMEX', 'VISA', 'MASTERCARD'],
         },
         tokenizationSpecification: {
           type: 'PAYMENT_GATEWAY',
@@ -99,6 +99,7 @@ export class PaymentComponent implements OnInit {
     if (error) {
       console.log('Error:', error);
     } else {
+      alert('Booking Successfully');
       console.log('Success!', token);
     }
   }

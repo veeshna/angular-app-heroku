@@ -104,22 +104,25 @@
       }
     }
   .footer-container{
-    border: 1px solid grey;
+    background-color: #181818;
     display: grid;
-    width: 100vw;
-    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-row: 100px;
     .firsts-container{
       display: flex;
+      color: #ffffff;
       flex-direction: column;
       align-items: flex-start;
+      padding-left: 30px;
+      padding-bottom: 10px;
       .title{
         font-weight: 600;
         font-size: 24px;
         margin-bottom: 0;
       }
       .logo{
-        width: 150px;
+        width: 200px;
       }
       .copyright{
         margin-bottom: 0;
@@ -128,12 +131,48 @@
     }
     .second-container{
       display: flex;
+      color: #ffffff;
       flex-direction: column;
       align-items: flex-start;
+      justify-items: center;
+      padding-left: 30px;
+      padding-bottom: 10px;
+
       .title{
         font-size: 18px;
+        font-weight: 600;
       }
-      
+      .description{
+        margin-top: 0;
+      }
+      .phone{
+        margin: 0;
+      }
+      .mail{
+        margin: 0;
+      }
+    }
+    .third-container{
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 30px;
+      padding-bottom: 10px;
+
+      .title{
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .description{
+        margin-top: 0;
+      }
+      .phone{
+        margin-top: 0;
+      }
+      .mail{
+        margin-top: 0;
+      }
     }
   }
   }
