@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "heroku-postbuild": "ng build"
+
   },
   "private": true,
   "dependencies": {
@@ -29,12 +31,13 @@
     "rxjs": "~7.5.0",
     "stripe-angular": "^1.7.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "@angular/cli": "~14.2.7",
+    "@angular/compiler-cli": "^14.2.0",
+    "typescript": "~4.7.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.7",
-    "@angular/cli": "~14.2.7",
-    "@angular/compiler-cli": "^14.2.0",
     "@types/googlepay": "^0.6.3",
     "@types/googlemaps": "^3.39.13",
     "@types/jasmine": "~4.0.0",
@@ -43,7 +46,10 @@
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": "~4.7.2"
+    "karma-jasmine-html-reporter": "~2.0.0"
+  },
+  "engines": {
+    "node": "16.10.0",
+    "npm": "7.24.0"
   }
 }
