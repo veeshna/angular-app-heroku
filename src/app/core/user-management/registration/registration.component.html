@@ -35,10 +35,10 @@
       </div>
 
       <div class="form-group left">
-        <label for="firstname" class="label-title">Mobile Number</label>
+        <label for="mobilenumber" class="label-title">Mobile Number</label>
         <input
           type="text"
-          id="firstname"
+          id="mobilenumber"
           class="form-input"
           placeholder="enter your mobile number"
           required="required"
@@ -79,17 +79,11 @@
           />
         </div>
       </div>
-
-      <!-- <div class="form-group">
-          <label for="choose-file" class="label-title">Address</label>
-          <textarea class="form-input" rows="4" cols="50" style="height:auto"></textarea>
-      </div> -->
     </div>
     <div class="form-footer">
-      <!-- <span>* required</span> -->
-      <button type="submit" class="btn">Create</button>
+      <button (click)="toLogin()" class="btn">Create</button>
     </div>
   </form>
 </p-dialog>
 
-<h5>Maximizable</h5>
+

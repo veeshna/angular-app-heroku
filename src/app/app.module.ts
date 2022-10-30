@@ -19,7 +19,7 @@ import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './core/feature/component/home/home.component';
-
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -37,6 +37,7 @@ import { HomeComponent } from './core/feature/component/home/home.component';
     ButtonModule,
     PanelModule,
     UserManagementModule,
+    NgxMaterialTimepickerModule
   ],
   exports: [],
   providers: [],

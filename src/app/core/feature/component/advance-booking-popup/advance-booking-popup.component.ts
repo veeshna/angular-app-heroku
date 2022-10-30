@@ -10,20 +10,18 @@ import { ambulanceType } from 'src/app/core/models/register';
 export class AdvanceBookingPopupComponent implements OnInit {
   @Input() displayModal: any;
   @Output() advancedPopup = new EventEmitter<boolean>();
+
   displayBasic: boolean = false;
-
   displayBasic2: boolean = false;
-
   displayMaximizable: boolean = false;
-
   displayPosition: boolean = false;
-
   position: string = '';
   cities: ambulanceType[];
   advanceBookingForm!: FormGroup;
-
   selectedCity!: ambulanceType;
   results: ambulanceType[] = [];
+  
+  
 
   constructor(private formBuilder: FormBuilder) {
     this.cities = [
@@ -41,6 +39,7 @@ export class AdvanceBookingPopupComponent implements OnInit {
       selectedCity: [''],
       pickUpLocation: [''],
       dropLocation: [''],
+      date:['']
     });
   }
   search() {

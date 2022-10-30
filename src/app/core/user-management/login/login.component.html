@@ -7,10 +7,7 @@
     <div class="login-container">
       <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
         <p-panel header="Login Example">
-          <div
-            class=""
-            style="margin: 10px 0px"
-          >
+          <div class="" style="margin: 10px 0px">
             <div class="">
               <div class="">Login:</div>
               <div class="">
@@ -67,7 +64,9 @@
                   [disabled]="!loginForm.valid"
                 ></button>
               </div>
-              <div class=""></div>
+              <div class="signup">
+                <a routerLink="/register"> Didn't Register? </a>
+              </div>
             </div>
           </div>
         </p-panel>
