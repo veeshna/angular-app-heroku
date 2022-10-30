@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ambulanceType } from 'src/app/core/models/register';
 
 @Component({
@@ -23,7 +24,7 @@ export class AdvanceBookingPopupComponent implements OnInit {
   
   
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private router: Router) {
     this.cities = [
       { name: 'ALS', code: 'NY' },
       { name: 'BLS', code: 'RM' },
@@ -77,5 +78,6 @@ export class AdvanceBookingPopupComponent implements OnInit {
   onSubmit() {
     this.displayModal = false;
     this.advancedPopup.emit(false);
+    this.router.navigate(['/ambulance-list']);
   }
 }

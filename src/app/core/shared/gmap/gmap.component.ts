@@ -30,10 +30,12 @@ export class GmapComponent implements OnInit {
       center: { lat: 10.0159, lng: 76.3419 },
       zoom: 12,
     };
+    this.addMarker();
   }
   handleMapClick(event: any) {
     this.dialogVisible = true;
     this.selectedPosition = event.latLng;
+    console.log(this.selectedPosition);
   }
 
   handleOverlayClick(event: any) {
@@ -63,8 +65,8 @@ export class GmapComponent implements OnInit {
     this.overlays.push(
       new google.maps.Marker({
         position: {
-          lat: this.selectedPosition.lat(),
-          lng: this.selectedPosition.lng(),
+          lat: 10.026380631571673,
+          lng: 76.22053540649415,
         },
         title: this.markerTitle,
         draggable: this.draggable,
@@ -90,7 +92,7 @@ export class GmapComponent implements OnInit {
           title: 'Konyaalti',
         }),
         new google.maps.Marker({
-          position: { lat: 10.12, lng: 76.1519  },
+          position: { lat: 10.12, lng: 76.1519 },
           title: 'Ataturk Park',
         }),
         new google.maps.Marker({
