@@ -46,11 +46,15 @@
           align-items: center;
           justify-content: center;
           border-radius: 50%;
-          height: 60px;
-          width: 60px;
-          background-color: #f5f2f2;
-          .size-image {
-            height: 30px;
+          height: 80px;
+          width: 80px;
+          background-color: transparent;
+          cursor: pointer;
+          .size-image{
+            height: 40px;
+          }
+          &:hover{
+            background-color: #d13144;
           }
           &.active {
             background-color: #d13144;
@@ -60,7 +64,7 @@
       .type-ambulances {
         display: flex;
         gap: 100px;
-        width: 380px;
+        width: 440px;
         font-weight: 600;
         align-items: flex-start;
         justify-content: space-around;
@@ -70,5 +74,34 @@
         flex-direction: column;
       }
     }
+    .types{
+      font-weight: 600;
+      font-size: 36px;
+      color: #222;
+      align-self: center;
+
+    }
+    .first-container{
+      margin-top: 60px;
+      display: grid;
+      width: 80%;
+      gap: 20px;
+      justify-content: center;
+      grid-template-rows: 200px 200px;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-self: center;
+      text-align: center;
+      align-self: center;
+      .item{
+        .item-image{
+          height: 100px;
+        }
+        .new-para{
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
+    }
+
   }
 }
