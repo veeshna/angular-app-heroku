@@ -1,26 +1,38 @@
 <app-navbar></app-navbar>
 <div class="container">
   <div class="ambulance-list" *ngFor="let item of ambulanceList">
-    <p-card
-      header="{{ item.id }}"
-      subheader="{{ item.id }}"
+    <div class="flex-box">
+      <img class="image-size" src="{{item.photo}}" alt="">
+      <p-card
+      header="RC: {{ item.rcNumber}}"
       styleClass="shadow-2"
-      class="style-flex"
     >
-      <ng-template pTemplate="header">
-        <img class="image-size" alt="Card" [src]="item.photo" />
-      </ng-template>
-      <p>Name: {{ item.firstName }} {{ item.lastName }}</p>
-      <p>RC Number: {{ item.rcNumber }}</p>
+    <div class="main-content">
+      <div class="details">
+        <p>Name: {{ item.firstName }} {{ item.lastName }}</p>
+        <p>ID:{{item.id}}</p>
       <p>Phone Number: {{ item.phoneNumber }}</p>
+      </div>
+      <div class="content">
+        <p class="price">Rs: {{item.price}}</p>
+      </div>
+    </div>
+
+
+
+
 
       <ng-template pTemplate="footer">
+
         <p-button
-          label="Pay Now"
+          label="Select Driver and Pay"
           (click)="payment()"
           icon="pi pi-check"
         ></p-button>
+
       </ng-template>
     </p-card>
+    </div>
+
   </div>
 </div>

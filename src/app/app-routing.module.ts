@@ -5,6 +5,7 @@ import { DiyFirstAidComponent } from './core/feature/component/diy-first-aid/diy
 import { HomeComponent } from './core/feature/component/home/home.component';
 import { PaymentComponent } from './core/feature/component/payment/payment.component';
 import { GmapComponent } from './core/shared/gmap/gmap.component';
+import { MapPageComponent } from './core/shared/map-page/map-page.component';
 import { LoginComponent } from './core/user-management/login/login.component';
 import { RegistrationComponent } from './core/user-management/registration/registration.component';
 
@@ -27,7 +28,7 @@ const routes: Routes = [
   },
   {
     path: 'emergency-booking',
-    component: GmapComponent,
+    component: MapPageComponent,
   },
   {
     path: 'register',

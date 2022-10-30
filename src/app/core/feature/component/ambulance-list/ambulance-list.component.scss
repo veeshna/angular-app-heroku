@@ -3,20 +3,61 @@ p-card {
 }
 
 .container {
+  margin-top: 30px;
   display: flex;
   height: 100%;
   overflow: auto;
   gap: 20px;
   flex-wrap: wrap;
+  background-color:rgb(235, 217, 220);
+  border-radius: 16px;
 
   .ambulance-list {
     display: flex;
     width: 100%;
-    .image-size {
-      padding: 20px;
-      border-radius: 50%;
-      height: 200px;
-      width: 200px;
+    .flex-box{
+      width: 95%;
+      display:flex;
+      align-items: center;
+      .image-size {
+        padding: 20px;
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+      }
+      p-card{
+        .main-content{
+          display: flex;
+          .details{
+            display: flex;
+            flex-direction: column;
+            width:70%;
+            p{
+              margin: 0;
+            }
+          }
+          .content{
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            .price{
+              font-size: larger;
+              font-weight: 600;
+              color: white;
+              padding: 10px;
+              background-color: red;
+              border: 2px solid red;
+              width: 30%;
+              align-items: center;
+              text-align: center;
+              border-radius: 20px;
+            }
+          }
+        }
+
+      }
     }
+
   }
 }

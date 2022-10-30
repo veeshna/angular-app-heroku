@@ -37,14 +37,14 @@ export class MapPageComponent implements OnInit {
 
     navigator.geolocation.getCurrentPosition(position => {
 
-      this.source = {
-        lat: 9.9816,
-        lng: 76.2999
+      this.destination = {
+        lat: 10.0162,
+        lng: 76.3390
       };
 
-      this.destination = {
-        lat: 9.9814,
-        lng:76.25
+      this.source = {
+        lat: 9.9995,
+        lng:76.3146,
       };
 
       // initialize the map container

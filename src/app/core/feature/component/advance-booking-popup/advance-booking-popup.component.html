@@ -17,15 +17,8 @@
         [style]="{ width: '80%' }"
         optionLabel="name"
       >
-        <ng-template let-country pTemplate="item">
-          <div class="country-item">
-            <img
-              src="assets/showcase/images/demo/flag/flag_placeholder.png"
-              [class]="'flag flag-' + country.code.toLowerCase()"
-            />
-            <div>{{ country.name }}</div>
-          </div>
-        </ng-template></p-dropdown
+       
+        </p-dropdown
       >
     </div>
     <div class="form-group">
@@ -34,7 +27,7 @@
         formControlName="pickUpLocation"
         [suggestions]="results"
         (completeMethod)="search()"
-        
+
         field="name"
       >
         <ng-template let-country pTemplate="item">
