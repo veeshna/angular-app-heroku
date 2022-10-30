@@ -10,7 +10,6 @@
   flex-grow: 1;
   overflow: hidden;
 
-
   .logoWrapper {
     display: flex;
 
@@ -118,3 +117,7 @@
   transform: translate(50px, 0);
 }
 
+.p-button {
+  background: #d13144 !important;
+  border: 1px solid #d13144 !important;
+}
